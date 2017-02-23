@@ -1,7 +1,8 @@
+
 import Pipes
 import qualified Pipes.Prelude as PP
 
-main = runEffect $ (PP.zip (each [1..]) PP.stdinLn) 
+main = runEffect $ (PP.zip (each [1..]) PP.stdinLn)
        >-> PP.map g
        >-> PP.stdoutLn
 
