@@ -1,8 +1,6 @@
 import System.IO
 
-main = interact (loop)
-
-loop x = unlines ( zipWith g [1..] (lines x) )
+main = interact (unlines ( zipWith g [1..] (lines x) ))
 
 g counter line  = show counter ++ " " ++ show newLength ++ " " ++ take 50  line ++ ellipsis
    where newLength = length line
